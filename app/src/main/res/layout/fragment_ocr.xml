@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/pictureViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light">
+
+        <ImageView
+            android:id="@+id/pictureView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </FrameLayout>
+
+    <com.nalbertson.vision.views.GraphicOverlay
+        android:id="@+id/graphicOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@drawable/transparent_background_gradient"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/retakeBtn"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:src="@drawable/ic_camera_retake"
+                android:padding="16dp"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/rotateBtn"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:src="@drawable/ic_rotate"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toStartOf="@id/ocrTextBtn"
+                app:layout_constraintStart_toEndOf="@id/retakeBtn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/ocrTextBtn"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:src="@drawable/ic_abc"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+</androidx.constraintlayout.widget.ConstraintLayout>

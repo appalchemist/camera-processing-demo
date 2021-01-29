@@ -1,0 +1,4 @@
+include ':aarkus'
+include ':app:aarkus'
+include ':app'
+rootProject.name = "CameraProcessingDemo"

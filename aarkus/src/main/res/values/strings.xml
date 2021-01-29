@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aarkus Library</string>
+    <string name="ocr_low_storage_error">Ocr dependencies cannot be downloaded due to low device storage</string>
+    <string name="barcode_low_storage_error">Barcode dependencies cannot be downloaded due to low device storage</string>
+</resources>
